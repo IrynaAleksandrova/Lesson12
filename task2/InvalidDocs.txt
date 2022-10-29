@@ -1,5 +1,6 @@
 docnum95172095207452096320520 - invalid document, because length does not contain 15 characters
 doc0248520 - invalid document start name
+docnum05497jj121 - invalid document, because length does not contain 15 characters
 contr0147410 - invalid document start name
 con#$7283hbfn - invalid document start name
 contract0258345678@#$%^ - invalid document, because it contains more than just letters and numbers

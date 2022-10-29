@@ -4,6 +4,7 @@ import java.io.IOException;
 import java.nio.file.Files;
 import java.nio.file.Path;
 import java.util.List;
+import java.util.Scanner;
 
 public class Main {
 //    Допустим есть txt файл с номерами документов.
@@ -16,7 +17,12 @@ public class Main {
 //    входному файлу должен задаваться через консоль.
 
     public static void main(String[] args) throws IOException {
-        List<String> listOfDocuments = Files.readAllLines(Path.of(Input.getInput()));
-        System.out.println(listOfDocuments);
+        try (Scanner console = new Scanner(System.in)) {
+            System.out.println("Enter path of file: ");   // src/task1/numbers.txt
+            List<String> listOfDocuments = Files.readAllLines(Path.of(console.nextLine()));
+
+            List<String> validatedList = Validator.validate(listOfDocuments);
+            System.out.println(validatedList);
+        }
     }
 }
