@@ -9,10 +9,10 @@ import java.util.List;
 
 public class Sorting {
     public void sort() {
-        try (BufferedWriter writerValid = new BufferedWriter(new FileWriter("src/task2/ValidDocs.txt"));
-             BufferedWriter writerInvalid = new BufferedWriter(new FileWriter("src/task2/InvalidDocs.txt"))) {
+        try (BufferedWriter writerValid = new BufferedWriter(new FileWriter("task2/ValidDocs.txt"));
+             BufferedWriter writerInvalid = new BufferedWriter(new FileWriter("task2/InvalidDocs.txt"))) {
 
-            List<String> listOfDocuments = Files.readAllLines(Path.of("src/task2/differentDocs.txt"));
+            List<String> listOfDocuments = Files.readAllLines(Path.of("task2/differentDocs.txt"));
 
             for (String document : listOfDocuments) {
                 if (document.matches("[A-Za-z\\d]+") && document.length() == 15 &&

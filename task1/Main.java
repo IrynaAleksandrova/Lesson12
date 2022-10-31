@@ -18,7 +18,7 @@ public class Main {
 
     public static void main(String[] args) throws IOException {
         try (Scanner console = new Scanner(System.in)) {
-            System.out.println("Enter path of file: ");   // src/task1/numbers.txt
+            System.out.println("Enter path of file: ");         //   task1/numbers.txt
             List<String> listOfDocuments = Files.readAllLines(Path.of(console.nextLine()));
 
             List<String> validatedList = Validator.validate(listOfDocuments);
